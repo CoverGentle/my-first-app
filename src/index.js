@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import ShoppingList from './pages/shopping';
+import App from './App';
+// 路由配置文件
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <ShoppingList></ShoppingList>
-  </React.StrictMode>
-)
+root.render( <App />)
