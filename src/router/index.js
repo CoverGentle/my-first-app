@@ -1,21 +1,31 @@
-import {lazy} from "react";
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
+import routes from "./routes"
+// const setTitle = (title)=>{
+//   console.log(title);
+//   document.title = title
+// }
 
-const routes = [
-  {
-    path:"/home",
-    exact:true,
-    component:lazy(() =>import('../pages/home'))
-  },
-  {
-    path:"/buy",
-    exact:true,
-    component:lazy(() =>import('../pages/buy'))
-  },
-  {
-    path:"/shopping",
-    exact:true,
-    component:lazy(() =>import('../pages/shopping'))
+class RooterView extends Component{
+  render(){
+    return(
+      <Router>
+        <Routes>
+        {routes.map((item, index) => {
+          return (
+             <Route
+               key={index}
+               exact
+               path={item.path}
+              element={<item.component />} // 不是老版本的：component 或 render
+              // onEnter={setTitle(item.meta.title)}
+             />
+           );
+         })}
+        </Routes>
+      </Router>
+    )
   }
-]
+}
+export default RooterView
 
-export default routes
