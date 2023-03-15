@@ -1,7 +1,11 @@
 import React from "react";
 
 class Home extends React.Component{
-  
+  list = [
+    {id:1,name:"痴心绝对"},
+    {id:2,name:"痴心妄想"},
+    {id:3,name:"列表渲染"}
+  ]
   constructor(props){
     super(props)
     this.state = {date:new Date()}  
@@ -39,6 +43,9 @@ class Home extends React.Component{
             </ul>
           </div>
           <div>{this.state.date.toLocaleTimeString()}</div>
+          <ul>
+            {this.list.map(item=><li key={item.id}>{item.name}</li>)}
+          </ul>
       </div>
     )
   }

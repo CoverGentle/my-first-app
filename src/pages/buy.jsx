@@ -5,7 +5,7 @@ class Buy extends React.Component{
     return(
       <div>买买买</div>
     )
-  }
+  } 
 }
 
 export default Buy
