@@ -1,5 +1,18 @@
 import React from 'react';
 class ShoppingList extends React.Component{
+  /**
+   * 非受控组件
+   * */ 
+  constructor(){
+    super() 
+
+    //创建ref
+    this.txtRef = React.createRef()
+
+  }
+  handleBtn=()=>{
+    console.log(this.txtRef.current.value);
+  }
   render(){
     return(
       <div className="shopping-list">
@@ -9,6 +22,8 @@ class ShoppingList extends React.Component{
         <li>WhatsApp</li>
         <li>Oculus</li>
       </ul>
+      <input type="text" ref={this.txtRef}/>
+      <button onClick={this.handleBtn}>获取文本框的值</button>
       </div>
     )
   }
