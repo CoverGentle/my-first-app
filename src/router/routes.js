@@ -9,6 +9,13 @@ const routes = [
     component:lazy(() =>import('../pages/login'))
   },
   {
+    path:"/login",
+    meta: {
+      title: '登录',
+    },
+    component:lazy(() =>import('../pages/login'))
+  },
+  {
     path:"/home",
     meta: {
       title: '首页',
@@ -30,11 +37,11 @@ const routes = [
     component:lazy(() =>import('../pages/shopping'))
   },
   {
-    path:"/login",
+    path:"/ways",
     meta: {
       title: '登录',
     },
-    component:lazy(() =>import('../pages/login'))
+    component:lazy(() =>import('../pages/ways'))
   }
 ]
 
