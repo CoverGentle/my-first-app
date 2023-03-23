@@ -42,6 +42,13 @@ const routes = [
       title: '登录',
     },
     component:lazy(() =>import('../pages/ways'))
+  },
+  {
+    path:"/404",
+    meta: {
+      title: '404',
+    },
+    component:lazy(() =>import('../pages/404'))
   }
 ]
 
