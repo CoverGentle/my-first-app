@@ -7,7 +7,7 @@ class Nav extends React.Component{
     console.log("我点击了菜单栏");
   }
   handleFatherBtn=()=>{
-    this.props.getMsg(this.state.msg)21
+    this.props.getMsg(this.state.msg)
   }
   render(){
     console.log(this.props);
