@@ -6,7 +6,7 @@ const routes = [
     meta: {
       title: '登录',
     },
-    component:lazy(() =>import('../pages/login'))
+    component:lazy(() =>import('../pages/dome/dome2'))
   },
   {
     path:"/login",
@@ -49,6 +49,13 @@ const routes = [
       title: '404',
     },
     component:lazy(() =>import('../pages/404'))
+  },
+  {
+    path:"/dome2",
+    meta: {
+      title: '生命周期（创建时）',
+    },
+    component:lazy(() =>import('../pages/dome/dome2'))
   }
 ]
 
